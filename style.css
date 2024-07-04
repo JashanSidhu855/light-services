@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000 ;
+    color: #fc9b0c;
+    scroll-behavior: smooth;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: sticky;
+    top: 0;
+}
+.logo-text{
+    font-family: Ubuntu;
+    font-size: 26px;
+    font-weight: 800;
+}
+.nav-list{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+.nav-item{
+    cursor: pointer;
+    transition: 0.2s linear color;
+    text-decoration: none;
+}
+.logo-text{
+    text-decoration: none;
+}
+.nav-item:hover{
+    color: #ab6700;
+}
+.active{
+    text-decoration: underline;
+}
+.CTA{
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transform: 0.2s linear background-color;
+}
+.CTA:hover{
+    background-color: rgb(192, 192, 192);
+    
+}
+
+.mobile-nav{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+    position: sticky;
+    top: 0;
+}
+.menu-btn{
+    width: 30px;
+}
+#mobile-nav-list{
+    height: 80vh;
+    width: 100vw;
+    position: fixed;
+    top:-80vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-size: 30px;
+    list-style: none;
+    z-index: 1;
+    transition: top 0.5s ease-in-out;
+}
+#mobile-nav-list.open {
+    top: 0;
+}
+#menu-btn{
+    font-size: 24px;
+    border: none;
+    background: transparent;
+}
+
+.hero{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px 50px;
+    flex-wrap: wrap;
+}
+.left-hero{
+    width: 60%;
+}
+.left-hero h1{
+    font-family: Ubuntu;
+}
+.left-hero p, .feature p{
+    line-height: 1.5;
+    margin: 30px 0;
+    color: rgb(192, 192, 192);
+}
+.hero-image{
+    width: 450px;
+}
+.section-heading{
+    font-size: 30px;
+    text-align: center;
+
+}
+#features{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.feature-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.feature{
+    width: 300px;
+    /* height: 400px; */
+    text-align: center;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px 50px;
+}
+.card-heading{
+    font-size: 22px;
+    margin: 20px 0;
+    margin-top: 10px;
+}
+@media screen and (max-width: 450px) {
+    nav{
+        display: none;
+    }
+    .hero-img{
+        width: 300px;
+        margin: 20px;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .right-hero{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px auto;
+    }
+}
+@media screen and (min-width: 451px){
+    .mobile-nav{
+        display: none;
+    }
+}
